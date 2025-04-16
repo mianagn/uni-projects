@@ -1,5 +1,4 @@
 # JavaFX Budget Tracker App
-# (resources/com/homeScreen)
 ## 🚀 Project Overview
 
 A simple personal finance tracking app built with JavaFX built for a uni project. Users can track their incomes and expenses, view a dynamic balance, and get an overview of their monthly transactions — all with a clean interface inspired by apps like Revolut.
