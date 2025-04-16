@@ -1,0 +1,76 @@
+/* Table styling */
+.table-view {
+    -fx-background-color: rgba(0, 0, 30, 0.3);
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0, 0, 0);
+}
+
+.table-view .column-header {
+    -fx-background-color: #1e3c72;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10 5 10 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+
+.table-view .table-cell {
+    -fx-text-fill: white;
+    -fx-alignment: center-left;
+    -fx-padding: 8 5 8 5;
+}
+
+.table-row-cell {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-table-cell-border-color: transparent;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: rgba(255, 255, 255, 0.05);
+}
+
+.table-row-cell:selected {
+    -fx-background-color: rgba(30, 60, 114, 0.8);
+    -fx-text-background-color: white;
+}
+
+/* Line Chart styling */
+.chart-plot-background {
+    -fx-background-color: rgba(0, 0, 30, 0.2);
+}
+
+.chart-vertical-grid-lines {
+    -fx-stroke: rgba(255, 255, 255, 0.1);
+}
+
+.chart-horizontal-grid-lines {
+    -fx-stroke: rgba(255, 255, 255, 0.1);
+}
+
+.chart-series-line {
+    -fx-stroke-width: 2px;
+}
+
+/* Add this to make the pie chart text more visible */
+.chart-pie-label {
+    -fx-fill: white;
+}
+
+.chart-pie-label-line {
+    -fx-stroke: white;
+}
+
+.chart-legend {
+    -fx-background-color: rgba(0, 0, 0, 0.5);
+    -fx-padding: 10px;
+}
+
+.chart-legend-item {
+    -fx-text-fill: white;
+}

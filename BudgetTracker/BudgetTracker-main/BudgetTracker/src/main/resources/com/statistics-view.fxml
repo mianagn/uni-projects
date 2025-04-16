@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="922.0" prefWidth="1358.0" style="-fx-background-color: linear-gradient(to bottom, #1e3c72, #000000);" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.StatisticsController">
+    <top>
+        <Pane fx:id="headerContainer" prefHeight="200.0" prefWidth="1358.0" BorderPane.alignment="CENTER">
+            <Button fx:id="StatisticsButton" disable="true" layoutX="624.0" layoutY="92.0" mnemonicParsing="false" onAction="#handleStatisticsButtonClick" style="-fx-background-color: grey; -fx-background-radius: 14;" text="Statistics">
+                <font>
+                    <Font name="System Bold" size="20.0" />
+                </font>
+            </Button>
+            <Button fx:id="HomeButton" layoutX="476.0" layoutY="92.0" mnemonicParsing="false" onAction="#handleHomeButtonClick" style="-fx-background-color: grey; -fx-background-radius: 14;" text="Home">
+                <font>
+                    <Font name="System Bold" size="20.0" />
+                </font>
+            </Button>
+            <Button fx:id="HistoryButton" layoutX="788.0" layoutY="92.0" mnemonicParsing="false" onAction="#handleHistoryButtonClick" style="-fx-background-color: grey; -fx-background-radius: 14;" text="History">
+                <font>
+                    <Font name="System Bold" size="20.0" />
+                </font>
+            </Button>
+            <Label fx:id="dateTime" alignment="CENTER" contentDisplay="CENTER" layoutX="1087.0" layoutY="14.0" prefHeight="40.0" prefWidth="248.0" style="-fx-background-color: black; -fx-background-radius: 30;" text="Date - time " textFill="#f5f5f5">
+                <font>
+                    <Font size="22.0" />
+                </font>
+            </Label>
+        </Pane>
+    </top>
+    <center>
+        <Pane fx:id="midContainer" prefHeight="400.0" prefWidth="1358.0" BorderPane.alignment="CENTER">
+            <!-- Month Navigation -->
+            <HBox alignment="CENTER" layoutX="507.0" layoutY="30.0" prefHeight="50.0" prefWidth="330.0" spacing="15.0">
+                <Button fx:id="prevMonthButton" mnemonicParsing="false" onAction="#handlePrevMonthClick" style="-fx-background-radius: 50; -fx-background-color: white;" text="&lt;-">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+                <Label fx:id="currentMonthLabel" text="Current Month" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <Button fx:id="nextMonthButton" mnemonicParsing="false" onAction="#handleNextMonthClick" style="-fx-background-radius: 50; -fx-background-color: white;" text="-&gt;">
+                    <font>
+                        <Font name="System Bold" size="16.0" />
+                    </font>
+                </Button>
+            </HBox>
+
+            <!-- Net Spend -->
+            <Label fx:id="netSpendLabel" alignment="CENTER" layoutX="507.0" layoutY="80.0" prefHeight="50.0" prefWidth="330.0" text="€0.00" textFill="WHITE">
+                <font>
+                    <Font name="System Bold" size="28.0" />
+                </font>
+            </Label>
+            <Label fx:id="netSpendText" alignment="CENTER" contentDisplay="CENTER" layoutX="553.0" layoutY="130.0" prefHeight="30.0" prefWidth="246.0" text="Net Spend" textAlignment="CENTER" textFill="#ddd0d0">
+                <font>
+                    <Font size="20.0" />
+                </font>
+            </Label>
+
+            <!-- Pie Charts for Income and Expenses -->
+            <PieChart fx:id="incomePieChart" labelsVisible="true" layoutX="115.0" layoutY="200.0" legendVisible="true" prefHeight="350.0" prefWidth="500.0" style="-fx-background-color: transparent;">
+                <!-- PieChart data added in controller -->
+            </PieChart>
+            <PieChart fx:id="expensePieChart" labelsVisible="true" layoutX="743.0" layoutY="200.0" legendVisible="true" prefHeight="350.0" prefWidth="500.0" style="-fx-background-color: transparent;">
+                <!-- PieChart data added in controller -->
+            </PieChart>
+        </Pane>
+    </center>
+</BorderPane>

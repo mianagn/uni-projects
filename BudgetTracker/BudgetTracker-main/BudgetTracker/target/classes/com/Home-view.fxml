@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="922.0" prefWidth="1358.0" style="-fx-background-color: linear-gradient(to bottom, #1e3c72, #000000); -fx-background-radius: 0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.HomeController">
+   <top>
+      <Pane fx:id="headerContainer" prefHeight="390.0" prefWidth="1358.0" BorderPane.alignment="CENTER">
+         <ImageView fx:id="profilePic" fitHeight="225.0" fitWidth="234.0" layoutX="566.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+            <Image url="@profile.png" />
+         </ImageView>
+         <Text fx:id="welcome" fill="WHITE" layoutX="547.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" Welcome Nikos !" wrappingWidth="263.576171875">
+            <font>
+               <Font size="34.0" />
+            </font>
+         </Text>
+         <Button fx:id="StatisticsButton" layoutX="624.0" layoutY="92.0" mnemonicParsing="false" onAction="#handleStatisticsButtonClick" style="-fx-background-color: grey; -fx-background-radius: 14;" text="Statistics">
+            <font>
+               <Font name="System Bold" size="20.0" />
+            </font>
+         </Button>
+         <Button fx:id="HomeButton" disable="true" layoutX="476.0" layoutY="92.0" mnemonicParsing="false" style="-fx-background-color: grey; -fx-background-radius: 14;" text="Home">
+            <font>
+               <Font name="System Bold" size="20.0" />
+            </font>
+         </Button>
+         <Button fx:id="HistoryButton" layoutX="788.0" layoutY="92.0" mnemonicParsing="false" onAction="#handleHistoryButtonClick" style="-fx-background-color: grey; -fx-background-radius: 14;" text="History">
+            <font>
+               <Font name="System Bold" size="20.0" />
+            </font>
+         </Button>
+         <Label fx:id="dateTime" alignment="CENTER" contentDisplay="CENTER" layoutX="1087.0" layoutY="14.0" prefHeight="40.0" prefWidth="248.0" style="-fx-background-color: black; -fx-background-radius: 30;" text="Date - time " textFill="#f5f5f5">
+            <font>
+               <Font size="22.0" />
+            </font>
+         </Label>
+      </Pane>
+   </top>
+   <center>
+      <Pane fx:id="midContainer" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <Label fx:id="balance" alignment="CENTER" contentDisplay="CENTER" layoutX="240.0" layoutY="14.0" prefHeight="100.0" prefWidth="879.0" text="\$0.00" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="41.0" />
+            </font>
+         </Label>
+         <Label fx:id="balanceText" layoutX="618.0" layoutY="89.0" text="Available balance" textAlignment="CENTER" textFill="#ddd0d0">
+            <font>
+               <Font size="16.0" />
+            </font>
+         </Label>
+         <Button fx:id="expenseButton" layoutX="726.0" layoutY="124.0" mnemonicParsing="false" onAction="#handleExpenseButtonClick" prefHeight="71.0" prefWidth="164.0" style="-fx-background-color: red; -fx-background-radius: 14;" text="Expense">
+            <font>
+               <Font size="32.0" />
+            </font>
+         </Button>
+         <Button fx:id="incomeButton" layoutX="480.0" layoutY="124.0" mnemonicParsing="false" onAction="#handleIncomeButtonClick" prefHeight="71.0" prefWidth="164.0" style="-fx-background-color: green; -fx-background-radius: 14;" text="Income" textFill="#fffefe">
+            <font>
+               <Font size="32.0" />
+            </font>
+         </Button>
+         <TableView fx:id="recentTable" layoutX="469.0" layoutY="258.0" prefHeight="228.0" prefWidth="433.0">
+            <columns>
+               <TableColumn fx:id="descriptionCol" prefWidth="166.0" text="Description" />
+               <TableColumn fx:id="amountCol" prefWidth="142.0" text="Amount" />
+               <TableColumn fx:id="dateCol" prefWidth="123.0" text="Date" />
+            </columns>
+         </TableView>
+         <Text fill="WHITE" layoutX="469.0" layoutY="241.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Last transactions :">
+            <font>
+               <Font size="20.0" />
+            </font>
+         </Text>
+      </Pane>
+   </center>
+</BorderPane>
